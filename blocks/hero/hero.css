@@ -25,7 +25,7 @@ main .hero h1 {
 }
 
 
-main .hero picture {
+main .hero picture, main .hero video {
     position: absolute;
     z-index: -1;
     top: 0;
@@ -36,7 +36,7 @@ main .hero picture {
     box-sizing: border-box;
 }
 
-main .hero img {
+main .hero img, main .hero video {
     object-fit: cover;
     width: 100%;
     height: auto;
