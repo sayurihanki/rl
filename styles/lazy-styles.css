@@ -1,6 +1,11 @@
 /* below the fold CSS goes here */
 
 @font-face {
-  font-family: 'Founders Grotesk Mono Regular' Arial, Helvetica, sans-serif;
-  src: url('./fonts/FoundersGroteskTextWeb-Regular.woff');
+  font-family: 'Founders Grotesk Mono Regular';
+  src: url('./fonts/FoundersGroteskMonoWeb-Regular.woff');
+}
+
+@font-face {
+  font-family: RL-icons;
+  src: url('./fonts/RL-icons.woff');
 }

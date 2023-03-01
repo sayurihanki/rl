@@ -22,7 +22,7 @@ function buildHeroBlock(main) {
   // eslint-disable-next-line no-bitwise
   if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
     const section = document.createElement('div');
-    section.append(buildBlock('hero', { elems: [picture, h1] }));
+    // section.append(buildBlock('hero', { elems: [picture, h1] }));
     main.prepend(section);
   }
 }
@@ -31,14 +31,14 @@ function buildHeroBlock(main) {
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
-function buildAutoBlocks(main) {
-  try {
-    buildHeroBlock(main);
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Auto Blocking failed', error);
-  }
-}
+// function buildAutoBlocks(main) {
+//   try {
+//     buildHeroBlock(main);
+//   } catch (error) {
+//     // eslint-disable-next-line no-console
+//     console.error('Auto Blocking failed', error);
+//   }
+// }
 
 /**
  * Decorates the main element.
@@ -48,7 +48,7 @@ function buildAutoBlocks(main) {
 export function decorateMain(main) {
   // hopefully forward compatible button decoration
   decorateButtons(main);
-  buildAutoBlocks(main);
+  // buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
 }
@@ -139,6 +139,30 @@ export function decorateIcons(element = document) {
       }
     }
   });
+}
+
+/**
+ * Helper function to create DOM elements
+ * @param {string} tag DOM element to be created
+ * @param {Object} attributes attributes to be added
+ * @param {HTMLElement|SVGElement|string} html HTML or SVG to append to/after new element
+ */
+
+export function createTag(tag, attributes, html = undefined) {
+  const el = document.createElement(tag);
+  if (html) {
+    if (html instanceof HTMLElement || html instanceof SVGElement) {
+      el.append(html);
+    } else {
+      el.insertAdjacentHTML('beforeend', html);
+    }
+  }
+  if (attributes) {
+    Object.entries(attributes).forEach(([key, val]) => {
+      el.setAttribute(key, val);
+    });
+  }
+  return el;
 }
 
 loadPage();
