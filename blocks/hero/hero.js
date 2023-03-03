@@ -11,11 +11,17 @@ poster="https://publish-p91555-e868145.adobeaemcloud.com/content/dam/gql-demo-te
 export default function decorate(block) {
   decorateIcons(block);
   if (Object.values(block.classList).includes('video')) {
-    const poster = block.querySelector('picture > img');
+    // const poster = block.querySelector('picture > img');
     const videoSrc = block.querySelector('div:nth-child(3) > div');
-    const video = createTag('video', { playsinline:'', muted:'', loop:'', autoplay:'', src: videoSrc.textContent, poster: poster.src });
+    const video = createTag('video', { playsinline: '', muted: 'true', loop: '', autoplay: '', src: videoSrc.textContent });
     videoSrc.remove();
-    console.log(video);
+    video.load();
+    video.addEventListener('loadeddata', () => {
+      console.log('loaded');
+      video.setAttribute('data-loaded', true);
+      video.play();
+    });
+    
     block.querySelector('div > picture').replaceWith(video);
     console.log(block);
   }
