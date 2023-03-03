@@ -13,13 +13,24 @@ export default function decorate(block) {
   if (Object.values(block.classList).includes('video')) {
     // const poster = block.querySelector('picture > img');
     const videoSrc = block.querySelector('div:nth-child(3) > div');
-    const video = createTag('video', { playsinline: '', muted: 'true', loop: '', autoplay: '', src: videoSrc.textContent });
+    const video = createTag('video', { playsinline: '', muted: 'true', loop: '', src: videoSrc.textContent });
     videoSrc.remove();
     video.load();
     video.addEventListener('loadeddata', () => {
       console.log('loaded');
+      video.setAttribute('autoplay', true);
       video.setAttribute('data-loaded', true);
-      video.play();
+      const promise = video.play();
+      if (promise !== undefined) {
+        promise.then(_ => {
+          // Autoplay started!
+          console.log('autoplay started');``
+        }).catch(error => {
+          console.log('autoplay prevented')
+          // Autoplay was prevented.
+          // Show a "Play" button so that user can start playback.
+        });
+      }
     });
     
     block.querySelector('div > picture').replaceWith(video);
