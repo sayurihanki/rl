@@ -35,7 +35,7 @@ export default async function decorate(block) {
 
     console.log(video);
 
-    // videoSrc.remove();
+    videoSrc.remove();
 
     video.load();
     video.addEventListener('loadeddata', () => {
