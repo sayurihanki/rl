@@ -126,6 +126,8 @@ export function decorateIcons(element = document) {
       return;
     }
     const icon = span.classList[1].substring(5);
+    console.log(span);
+    console.log(span.style);
     // eslint-disable-next-line no-use-before-define
     const resp = await fetch(`${window.hlx.codeBasePath}${ICON_ROOT}/${icon}.svg`);
     if (resp.ok) {
@@ -138,6 +140,7 @@ export function decorateIcons(element = document) {
         span.innerHTML = iconHTML;
       }
     }
+    else {}
   });
 }
 
