@@ -86,6 +86,7 @@ header nav .nav-hamburger button {
   overflow: initial;
   text-overflow: initial;
   white-space: initial;
+  color: white;
 }
 
 header nav .nav-hamburger-icon,
@@ -190,6 +191,7 @@ header nav .nav-sections ul > li > ul {
 header nav .nav-sections ul > li > ul > li {
   font-weight: 500;
 }
+
 
 header nav .nav-tools > p:nth-child(1) {
   display: flex;

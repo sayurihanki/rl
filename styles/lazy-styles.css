@@ -9,3 +9,8 @@
   font-family: RL-icons;
   src: url('./fonts/RL-icons.woff');
 }
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,700&display=swap');
+}
