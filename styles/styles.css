@@ -165,7 +165,7 @@ main input:hover {
 }
 
 main .section {
-  padding: 64px 16px;
+  /* padding: 64px 16px; */
 }
 
 main pre {
@@ -219,7 +219,7 @@ main img {
 
 @media (min-width: 600px) {
   main .section {
-    padding: 64px 32px;
+    /* padding: 64px 32px; */
   }  
 }
 
@@ -234,7 +234,7 @@ main img {
   }
   
   .section > div {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: auto;
   }
 }

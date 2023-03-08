@@ -6,6 +6,14 @@ header .nav-wrapper {
   position: fixed;
 }
 
+header .nav-wrapper:hover {
+  background-color: white;
+}
+
+/* header .nav-wrapper:not([data-scroll = '640']) {
+  background-color: transparent;
+} */
+
 header .icon-logo-white {
   width: 269px;
   height: 20px;
@@ -14,6 +22,7 @@ header .icon-logo-white {
 header .icon-logo-white > img {
   width: 100%;
   height: auto;
+  fill: white;
 }
 
 header nav {
@@ -65,6 +74,10 @@ header nav p {
 
 header nav a:any-link {
   color: var(--nav-link-color-light);
+}
+
+header .nav-wrapper:hover a:any-link {
+  color: black;
 }
 
 /* hamburger */
@@ -221,8 +234,17 @@ header nav .nav-tools > p:nth-child(4)::after {
   font-size: 18px;
 }
 
+header .nav-wrapper:hover .nav-tools > p::after {
+  color: black;
+}
+
 header .icon {
   fill: white;
+}
+
+header .nav-wrapper:hover .icon {
+  fill: black;
+  color: black;
 }
 
 @media (min-width: 900px) {

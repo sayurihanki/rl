@@ -13,6 +13,7 @@ main .hero {
     position: relative;
     padding: 32px;
     min-height: 300px;
+    height: 756px;
     z-index: -1;
     margin-top: var(--nav-offset);
 }
@@ -48,23 +49,81 @@ main .hero video {
 
 main .hero.video>div:nth-child(2)>div {
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, 100%);
+    line-height: normal;
+    display: block;
     text-align: center;
-    width: 355px;
-    height: 176px;
+    font-size: 9px;
+    font-family: 'Founders Grotesk Text Regular';
+    transform: translateX(-50%);
+    bottom: 12.6em;
 }
 
+main .hero.video>div:nth-child(2)>div h3,
+main .hero.video>div:nth-child(2)>div h1,
+main .hero.video>div:nth-child(2)>div p {
+    font-family: "Cormorant Garamond", serif;
+    color: white;
+    display: inline-block;
+}
+/** TODO: update for mobile **/
 main .hero.video>div:nth-child(2)>div h3 {
     font-size: 1.125em;
     letter-spacing: 0.026em;
     line-height: 1.556em;
     margin: 0 auto 1.167em;
-    display: inline-block;
-    font-family: "Cormorant Garamond", serif;
     font-size: 11px;
+    font-weight: 500;
+}
+
+main .hero.video>div:nth-child(2)>div p {
+    font-size: 14px;
+    letter-spacing: normal;
+    line-height: 1.556em;
+    margin: 0 auto 1.167em;
+    font-size: 17px;
+    font-weight: 500;
+    width: 480px;
+}
+
+main .hero.video>div:nth-child(2)>div h1 {
+    font-size: 1.125em;
+    letter-spacing: 0.026em;
+    line-height: 47px;
+    margin: 0 auto 1.167em;   
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+main .hero.video>div:nth-child(2)>div button {
+    background: transparent;
+    border: .5px solid white;
+    border-radius: unset;
     color: white;
+    font-size: 9.6px;
+    font-family: 'Founders Grotesk Text Regular', Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+main .hero.video>div:nth-child(2)>div button::before {
+    content: "";
+}
+
+main .hero.video>div:nth-child(2)>div button::after {
+    content: "";
+    left: 6em;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%) rotate(90deg);
+    transform: translate(-50%,-50%) rotate(90deg) scale(1.4);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0.75em 1.313em 0.75em;
+    border-color: transparent transparent currentColor transparent;
+    content: '';
+    font-size: .35em;
+    position: absolute;
 }
 
 main .hero.video>div:nth-child(2)>div h3::before {
@@ -88,4 +147,14 @@ main .hero.video>div:nth-child(2)>div h3::after {
     background-size: contain;
     background-image: url('../../icons/0131_black_history_month_lp_c01_arrow_icon_1.png');
     margin: 0 auto 0.556em;
+}
+
+@media (min-width: 900px) {
+    main .hero.video>div:nth-child(2)>div h3 {
+        font-size: 19.75px;
+    }
+
+    main .hero.video>div:nth-child(2)>div h1 {
+        font-size: 48px;
+    }
 }

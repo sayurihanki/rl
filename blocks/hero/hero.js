@@ -1,7 +1,6 @@
 import { createTag, decorateIcons } from '../../scripts/scripts.js';
 
 export default async function decorate(block) {
-  console.log(block);
   decorateIcons(block);
 
   if (Object.values(block.classList).includes('video')) {
@@ -23,5 +22,17 @@ export default async function decorate(block) {
       video.setAttribute('data-loaded', true);
       video.play();
     });
+
+    const button = block.querySelector('div:nth-child(2) a.button');
+    console.log(button);
+
+    const watchLink = button.href;
+    const watchTitle = button.textContent;
+
+    const watch = createTag('button');
+    const watchSpan = createTag('span');
+    watchSpan.textContent = watchTitle;
+    watch.appendChild(watchSpan);
+    button.replaceWith(watch);
   }
 }

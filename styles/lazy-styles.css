@@ -6,6 +6,11 @@
 }
 
 @font-face {
+  font-family: 'Founders Grotesk Text Regular';
+  src: url('./fonts/FoundersGroteskTextWeb-Regular.woff');
+}
+
+@font-face {
   font-family: RL-icons;
   src: url('./fonts/RL-icons.woff');
 }
