@@ -24,6 +24,8 @@
     border: 1px solid var(--highlight-background-color);
     background-color: var(--background-color);
     color: #d4c49c;
+    font-family: 'LeJeuneDeck-Regular-Web';
+    font-size: 13px;
 }
 
 .cards .cards-card-body {

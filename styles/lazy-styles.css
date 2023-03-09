@@ -19,3 +19,8 @@
   font-family: "Cormorant Garamond";
   src: url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,700&display=swap');
 }
+
+@font-face {
+  font-family: 'LeJeuneDeck-Regular-Web';
+  src: url('./fonts/LeJeuneDeck-Regular-Web.woff');
+}

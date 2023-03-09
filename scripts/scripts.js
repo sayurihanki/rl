@@ -15,6 +15,7 @@ import {
 const LCP_BLOCKS = []; // add your LCP blocks to the list
 window.hlx.RUM_GENERATION = 'project-1'; // add your RUM generation information here
 const ICON_ROOT = '/icons';
+const ICON_EXCEPTIONS = ['login', 'cart', 'wishlist'];
 
 function buildHeroBlock(main) {
   const h1 = main.querySelector('h1');
@@ -126,8 +127,8 @@ export function decorateIcons(element = document) {
       return;
     }
     const icon = span.classList[1].substring(5);
-    console.log(span);
-    console.log(span.style);
+    if (ICON_EXCEPTIONS.includes(icon)) return;
+
     // eslint-disable-next-line no-use-before-define
     const resp = await fetch(`${window.hlx.codeBasePath}${ICON_ROOT}/${icon}.svg`);
     if (resp.ok) {
@@ -140,7 +141,7 @@ export function decorateIcons(element = document) {
         span.innerHTML = iconHTML;
       }
     }
-    else {}
+    else { }
   });
 }
 
@@ -166,6 +167,25 @@ export function createTag(tag, attributes, html = undefined) {
     });
   }
   return el;
+}
+
+export function makeVideo(element, href) {
+  element.innerHTML = `<video loop muted playsInline>
+    <source data-src="${href}" type="video/mp4" />
+  </video>`;
+
+  const video = element.querySelector('video');
+  const source = element.querySelector('video > source');
+
+  source.src = source.dataset.src;
+  
+  video.load();
+  video.addEventListener('loadeddata', () => {
+    video.setAttribute('autoplay', true);
+    video.setAttribute('data-loaded', true);
+    video.play();
+  });
+
 }
 
 loadPage();

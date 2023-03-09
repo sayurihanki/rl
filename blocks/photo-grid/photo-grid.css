@@ -1,0 +1,53 @@
+main .black-history-month {
+  position: relative;
+  z-index: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+main .black-history-month .bg-image,
+main .black-history-month .overlay {
+  position: absolute;
+  min-width: 100%;
+  height: auto;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+main .black-history-month .bg-image > picture > img {
+  min-width: 100%;
+}
+
+main .black-history-month .overlay {
+  padding-top: 40px;
+}
+
+main .black-history-month .overlay>.default-content-wrapper {
+
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+  /* height: 24.875em; */
+  margin: 0 271px ;
+  /* margin: auto; */
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: light;
+  font-size: 1.4em;
+  line-height: 1.333em;
+}
+
+main .black-history-month .photo-grid>div {
+  display: flex;
+  justify-content: space-between;
+  width: 51em;
+  margin: 0 auto;
+}
+
+main .black-history-month .photo-grid>div>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
