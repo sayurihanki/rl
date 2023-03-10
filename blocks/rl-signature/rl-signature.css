@@ -1,0 +1,32 @@
+.rl-signature span > svg {
+  /* width: 4%; */
+  top: 25.79408543263965%;
+  left: 13.906575759283259%;
+  fill: black;
+}
+
+.rl-signature {
+  height: 40px;
+}
+.rl-signature span.icon {
+  display: unset;
+}
+
+.rl-signature span > svg path {
+  stroke: black;
+}
+
+.rl-signature span svg {
+  /* position: relative; */
+  /* transform: translateY(150px); */
+  opacity: 0;
+  transition: 1s all ease;
+  width: .5%;
+}
+
+.rl-signature span svg.active{
+  /* transform: translateY(0); */
+  opacity: 1;
+  width: 4%;
+}
+

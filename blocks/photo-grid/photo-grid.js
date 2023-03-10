@@ -1,4 +1,4 @@
-import { createTag, decorateIcons, makeVideo } from '../../scripts/scripts.js';
+import { createTag, makeVideo } from '../../scripts/scripts.js';
 import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
 
 {/* <picture class="rlc-picture" data-images="{
@@ -13,15 +13,15 @@ import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
 function scrunch(divs) {
   const leftCol = createTag('div', {class: 'left-col'});
   const middleCol = createTag('div', {class: 'middle-col'});
-  const rightCol = createTag('div', {class: 'rightCol'});
+  const rightCol = createTag('div', {class: 'right-col'});
   console.log(divs);
   let n = 0;
   divs.forEach((div) => {
-    if(n === 0) {
+    if(n === 0 || n === 2) {
       leftCol.appendChild([...div.children][0]);
       middleCol.appendChild([...div.children][0]);
       rightCol.appendChild([...div.children][0]);
-    } else {
+    } else if(n === 1) {
       leftCol.appendChild([...div.children][0]);
       rightCol.appendChild([...div.children][0]);
     }

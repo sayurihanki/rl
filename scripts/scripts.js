@@ -189,3 +189,47 @@ export function makeVideo(element, href) {
 }
 
 loadPage();
+
+function reveals() {
+  const reveals = document.querySelectorAll(".rl-signature span > svg");
+
+  for (let i = 0; i < reveals.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
+    let elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+
+  // const greenbar = document.querySelectorAll(".cards.stick > ul");  //-73
+
+  // for (let i = 0; i < greenbar.length; i++) {
+  //   let windowHeight = window.innerHeight;
+  //   let elementTop = greenbar[i].getBoundingClientRect().top;
+  //   let elementVisible = 150;
+
+  //   if(elementTop < -72) {
+  //     greenbar[i].style.position='fixed';
+  //     greenbar[i].style.top = '-73px';
+  //   }
+  //   // else {
+  //   //   greenbar[i].style.position='unset';
+  //   //   greenbar[i].style.top = 'unset';
+  //   // }
+  // }
+
+  const navWrapper = document.querySelector('.nav-wrapper')
+  navWrapper.style.backgroundColor = '#fff';
+  const links = navWrapper.querySelectorAll('a');
+  links.forEach(link => {
+    link.style.color = '#000';
+  });
+
+  navWrapper.querySelector('.nav-brand svg').style.fill = '#000'
+}
+
+window.addEventListener("scroll", reveals);

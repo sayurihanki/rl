@@ -39,6 +39,9 @@ main .black-history-month .overlay>.default-content-wrapper {
   line-height: 1.333em;
 }
 
+main .black-history-month .photo-grid {
+  padding-top: 50px;
+}
 main .black-history-month .photo-grid>div {
   display: flex;
   justify-content: space-between;
@@ -50,4 +53,39 @@ main .black-history-month .photo-grid>div>div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+main .black-history-month .photo-grid > .cols > div.left-col > div img,
+main .black-history-month .photo-grid > .cols > div.right-col > div img {
+  width: 264px;
+}
+
+main .black-history-month .photo-grid > .cols > div.left-col {
+  padding-right: 20px;
+}
+
+main .black-history-month .photo-grid > .cols > div.right-col {
+  padding-left: 20px;
+}
+
+main .black-history-month .photo-grid > .cols > div.middle-col img {
+  height: 519px;
+}
+
+main .black-history-month .photo-grid h3 {
+  font-family: "LeJeuneDeck-Regular-Web";
+  font-weight: lighter;
+  font-size: 1.125em;
+  line-height: 1.556em;
+  color: #000;
+  text-transform: none;
+}
+
+main .black-history-month .photo-grid p {
+  font-family: "Founders Grotesk Mono Regular";
+  font-weight: lighter;
+  font-size: 16px;
+  line-height: 35.2px;
+  color: #000;
+  text-transform: none;
 }
