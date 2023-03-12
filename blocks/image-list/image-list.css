@@ -24,6 +24,11 @@ main .section.image-list-container p {
   text-transform: none;
 }
 
+main .image-list ul {
+  display: flex;
+  flex-direction: row;
+}
+
 main .image-list .offers-card-image {
   height: 572px;
   width: 435px;

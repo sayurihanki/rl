@@ -5,10 +5,51 @@ footer {
 }
 
 footer .footer {
-  max-width: 1200px;
+  max-width: 1920px;
   margin: auto;
+}
+
+footer .footer div {
+  display: flex;
+  flex-direction: row;
 }
 
 footer .footer p {
   margin: 0;
 }
+
+footer .footer .footer-element {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  border-right: 1px solid #d1d1d1;
+}
+
+footer .footer .footer-element {
+  padding-left: 30px;
+}
+
+footer .footer {
+  border-top: 1px solid #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
+  padding: 20px 0;
+}
+
+footer .footer .footer-element h3 {
+  color: #252525;
+  font-size: 14px;
+  font-family: 'Founders Grotesk Text Regular', Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+
+footer .footer .footer-element ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+footer .footer li > a {
+  font-size: 13px;
+  color: #252525;
+}
+
