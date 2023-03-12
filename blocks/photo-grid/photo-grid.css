@@ -3,11 +3,14 @@ main .black-history-month {
   z-index: 0;
   margin: 0 auto;
   text-align: center;
+  height:auto;
+  margin: 0;
+  padding: 0;
 }
 
 main .black-history-month .bg-image,
 main .black-history-month .overlay {
-  position: absolute;
+  position: relative;
   min-width: 100%;
   height: auto;
   z-index: -1;
@@ -15,13 +18,15 @@ main .black-history-month .overlay {
   left: 0;
 }
 
+main .black-history-month .overlay {
+  position: absolute;
+}
+
 main .black-history-month .bg-image > picture > img {
   min-width: 100%;
 }
 
-main .black-history-month .overlay {
-  padding-top: 40px;
-}
+
 
 main .black-history-month .overlay>.default-content-wrapper {
 

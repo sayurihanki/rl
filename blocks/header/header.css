@@ -234,9 +234,12 @@ header nav .nav-tools > p:nth-child(4)::after {
   font-size: 18px;
 }
 
-header .nav-wrapper:hover .nav-tools > p::after {
+header .nav-wrapper:hover .nav-tools > p::after,
+header .nav-wrapper .nav-tools > p.black::after {
   color: black;
 }
+
+
 
 header .icon {
   fill: white;

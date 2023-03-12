@@ -11,9 +11,9 @@ main .hero-container {
 
 main .hero {
     position: relative;
-    padding: 32px;
     min-height: 300px;
-    height: 756px;
+    max-height: 756px;
+    height: fit-content;
     z-index: -1;
     margin-top: var(--nav-offset);
 }
@@ -28,7 +28,7 @@ main .hero h1 {
 
 main .hero picture,
 main .hero video {
-    position: absolute;
+    /* position: absolute; */
     z-index: -1;
     top: 0;
     left: 0;
@@ -104,15 +104,16 @@ main .hero.video>div:nth-child(2)>div button {
     font-size: 9.6px;
     font-family: 'Founders Grotesk Text Regular', Arial, Helvetica, sans-serif;
     position: relative;
+
+}
+
+main .hero.video>div:nth-child(2)>div button>span {
+    margin-left: 8px;
 }
 
 main .hero.video>div:nth-child(2)>div button::before {
     content: "";
-}
-
-main .hero.video>div:nth-child(2)>div button::after {
-    content: "";
-    left: 6em;
+    /* left: 6em; */
     top: 50%;
     -webkit-transform: translate(-50%,-50%) rotate(90deg);
     transform: translate(-50%,-50%) rotate(90deg) scale(1.4);
@@ -124,6 +125,10 @@ main .hero.video>div:nth-child(2)>div button::after {
     content: '';
     font-size: .35em;
     position: absolute;
+}
+
+main .hero.video>div:nth-child(2)>div button::after {
+    
 }
 
 main .hero.video>div:nth-child(2)>div h3::before {
@@ -147,7 +152,7 @@ main .hero.video>div:nth-child(2)>div h3::after {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url('../../icons/0131_black_history_month_lp_c01_arrow_icon_1.png');
-    margin: 0 auto 0.556em;
+    margin: .556em auto 0;
 }
 
 @media (min-width: 900px) {

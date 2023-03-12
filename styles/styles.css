@@ -110,7 +110,7 @@ pre {
 /* buttons */
 
 a.button:any-link, button {
-  font-family: var(--body-font-family);
+  /* font-family: var(--body-font-family);
   display: inline-block;
   box-sizing: border-box;
   text-decoration: none;
@@ -127,6 +127,14 @@ a.button:any-link, button {
   overflow: hidden;
   text-overflow: ellipsis;
   border-radius: 30px;
+
+   */
+  background: transparent;
+  border-bottom: .5px solid white;
+  color: white;
+  font-size: 9.6px;
+  font-family: 'Founders Grotesk Text Regular', Arial, Helvetica, sans-serif;
+  position: relative;
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
@@ -248,3 +256,9 @@ main .section[data-section-status='initialized'] {
 main .section.highlight {
   background-color: var(--highlight-background-color);
 }
+
+main {
+  max-width: 1920px;
+  margin: auto;
+}
+

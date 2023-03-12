@@ -1,0 +1,34 @@
+main .section.image-list-container {
+  padding-top: 80px;
+  height: 100vh;
+  background-color: black;
+  text-align: center;
+}
+
+main .section.image-list-container h3,
+main .section.image-list-container p {
+  color: white;
+  font-family: "LeJeuneDeck-Regular", Times, serif;
+  font-weight: 100;
+  font-size: 2.750em;
+  line-height: 1.205em;
+  letter-spacing: 0.023em;
+  text-transform: none;
+}
+
+main .section.image-list-container p {
+  font-weight: 100;
+  font-size: .925em;
+  line-height: 1.556em;
+  letter-spacing: 0.014em;
+  text-transform: none;
+}
+
+main .image-list .offers-card-image {
+  height: 572px;
+  width: 435px;
+}
+
+main .image-list .offers-card-image img {
+  height: 100%;
+}

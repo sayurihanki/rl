@@ -229,7 +229,15 @@ function reveals() {
     link.style.color = '#000';
   });
 
-  navWrapper.querySelector('.nav-brand svg').style.fill = '#000'
+  let icons = navWrapper.querySelectorAll('.nav-tools svg');
+  icons.forEach((icon) => {
+    icon.style.fill = '#000'
+  });
+
+  icons = navWrapper.querySelectorAll('.nav-tools span.icon');
+  icons.forEach((icon) => {
+    icon.parentElement.classList.add('black');
+  })
 }
 
 window.addEventListener("scroll", reveals);
