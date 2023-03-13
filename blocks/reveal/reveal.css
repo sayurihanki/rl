@@ -1,0 +1,14 @@
+main .reveal > div h2 {
+  font-size: 6.250em;
+  letter-spacing: 0;
+  line-height: 0.900em;
+  color: #AFA36C;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: lighter;
+  margin: auto;
+}
+
+main .reveal video {
+  width: 0;
+  height: auto;
+}

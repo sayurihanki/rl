@@ -15,15 +15,15 @@
   --link-color: #035fe6;
   --link-hover-color: #136ff6;
   --background-color: transparent;
-  --overlay-background-color:transparent;
-  --highlight-background-color: #ccc;
+  --overlay-background-color:#1C2D24;
+  --highlight-background-color: #AFA36C;
   --text-color: #000;
   --nav-link-color-light:#fff;
 
   /* fonts */
-  --body-font-family: 'Founders Grotesk Mono Regular', Arial, Helvetica, sans-serif;
+  --body-font-family: 'Founders Grotesk Regular Web', Arial, Helvetica, sans-serif;
   --heading-font-family: var(--body-font-family);
-  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
+  --fixed-font-family: 'Founders Grotesk Mono Regular', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -65,7 +65,7 @@ header {
 h1, h2, h3,
 h4, h5, h6 {
   font-family: var(--heading-font-family);
-  font-weight: 600;
+  font-weight: lighter;
   line-height: 1.25;
   margin-top: 1em;
   margin-bottom: .5em;
@@ -173,7 +173,17 @@ main input:hover {
 }
 
 main .section {
-  /* padding: 64px 16px; */
+  position: relative;
+  padding: 0;
+  text-align: center;
+}
+
+main .section.reveal-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+  background-color: var(--overlay-background-color);
 }
 
 main pre {
@@ -261,4 +271,6 @@ main {
   max-width: 1920px;
   margin: auto;
 }
+
+
 

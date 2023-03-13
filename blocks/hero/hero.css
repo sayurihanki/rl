@@ -57,6 +57,7 @@ main .hero.video>div:nth-child(2)>div {
     font-family: 'Founders Grotesk Text Regular';
     transform: translateX(-50%);
     bottom: 12.6em;
+    max-width: 660px;
 }
 
 main .hero.video>div:nth-child(2)>div h3,

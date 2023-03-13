@@ -190,9 +190,10 @@ export function makeVideo(element, href) {
 
 loadPage();
 
+let pos = 0;
+let vWidth = 100;
 function reveals() {
   const reveals = document.querySelectorAll(".rl-signature span > svg");
-
   for (let i = 0; i < reveals.length; i++) {
     let windowHeight = window.innerHeight;
     let elementTop = reveals[i].getBoundingClientRect().top;
@@ -205,39 +206,65 @@ function reveals() {
     }
   }
 
-  // const greenbar = document.querySelectorAll(".cards.stick > ul");  //-73
+  const greenbar = document.querySelector(".cards.stick"); 
+  if(greenbar.getBoundingClientRect().top < -74 && pos === 0) {
+    greenbar.style.position = 'fixed';
+    greenbar.style.top = '-80px';
+    greenbar.style['z-index'] = '1'; 
+    pos = window.visualViewport.pageTop;
+  } else if(pos > window.visualViewport.pageTop) {
+    greenbar.style.position = 'relative';
+    greenbar.style.top = 'unset';
+    greenbar.style['z-index'] = '1';
+    pos = 0;
+  }
 
-  // for (let i = 0; i < greenbar.length; i++) {
-  //   let windowHeight = window.innerHeight;
-  //   let elementTop = greenbar[i].getBoundingClientRect().top;
-  //   let elementVisible = 150;
+  const navWrapper = document.querySelector('.nav-wrapper');
+  let bgColor = 'transparent';
+  let fontColor = '#000';
+  let className = '';
 
-  //   if(elementTop < -72) {
-  //     greenbar[i].style.position='fixed';
-  //     greenbar[i].style.top = '-73px';
-  //   }
-  //   // else {
-  //   //   greenbar[i].style.position='unset';
-  //   //   greenbar[i].style.top = 'unset';
-  //   // }
-  // }
+  if(window.scrollY === 0) {
+    bgColor = 'transparent';
+    fontColor = '#fff';
+  } else {
+    bgColor = '#fff';
+    fontColor = '#000';
+    className = 'black';
+  }
 
-  const navWrapper = document.querySelector('.nav-wrapper')
-  navWrapper.style.backgroundColor = '#fff';
+  navWrapper.style.backgroundColor = bgColor;
   const links = navWrapper.querySelectorAll('a');
   links.forEach(link => {
-    link.style.color = '#000';
+    link.style.color = fontColor;
   });
 
-  let icons = navWrapper.querySelectorAll('.nav-tools svg');
+  let icons = navWrapper.querySelectorAll('span.icon');
   icons.forEach((icon) => {
-    icon.style.fill = '#000'
+    icon.style.fill = fontColor;
   });
 
-  icons = navWrapper.querySelectorAll('.nav-tools span.icon');
+  icons = navWrapper.querySelectorAll('span.icon');
   icons.forEach((icon) => {
-    icon.parentElement.classList.add('black');
-  })
+    if(className == '')
+      icon.parentElement.classList.remove('black');
+    else
+      icon.parentElement.classList.add('black');
+  });
+
+  const reveal = document.querySelector('.reveal');
+  
+  const rect = reveal.getBoundingClientRect();
+  const elemTop = rect.top;
+  const elemBottom = rect.bottom;
+  const isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+
+  const video = reveal.querySelector('video');
+  
+  if(isVisible) {
+    vWidth += 100;
+    video.style.width = `${vWidth}px`;
+  }
 }
 
 window.addEventListener("scroll", reveals);

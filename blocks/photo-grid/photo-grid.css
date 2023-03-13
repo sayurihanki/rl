@@ -6,6 +6,7 @@ main .black-history-month {
   height:auto;
   margin: 0;
   padding: 0;
+  max-height: 78em;
 }
 
 main .black-history-month .bg-image,
@@ -20,6 +21,7 @@ main .black-history-month .overlay {
 
 main .black-history-month .overlay {
   position: absolute;
+  padding: 3.688em 0 0;
 }
 
 main .black-history-month .bg-image > picture > img {
