@@ -213,8 +213,6 @@ function reveals() {
   if(gbTop < (imgHeight.offsetHeight - navWrapper.offsetHeight) && pos === 0) {
     greenbar.style.position = 'fixed'; 
     greenbar.style.top = `${(navWrapper.offsetHeight - imgHeight.offsetHeight)}px`;
-    console.log(greenbar.style.top);
-    console.log(greenbar.offsetHeight);
     greenbar.style['z-index'] = '1'; 
     pos = window.visualViewport.pageTop;
   } else if(pos > window.visualViewport.pageTop) {
@@ -265,22 +263,14 @@ function reveals() {
   const isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
 
   const video = reveal.querySelector('video');
-  const videoH2 = reveal.querySelector('.overlay > h2');
-  
+   
   if(isVisible) {
-    vWidth += 10;
+    vWidth += 160;
     video.style.left = '50%';
     video.style.top = '50%';
     video.style.transform = 'translate(-50%, -50%)';
     video.style.width = `${vWidth}px`;
     video.style.maxHeight = '100%';
-
-    videoH2.style.left = '50%';
-    videoH2.style.top = '50%';
-    videoH2.style.transform = 'translate(-50%, -50%)';
-
-    videoH2.style.width = `${vWidth}px`;
-    videoH2.style.maxWidth = '80%';
   }
 }
 

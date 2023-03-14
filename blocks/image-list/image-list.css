@@ -27,13 +27,26 @@ main .section.image-list-container p {
 main .image-list ul {
   display: flex;
   flex-direction: row;
+  overflow-y: scroll;
 }
 
 main .image-list .offers-card-image {
-  height: 572px;
-  width: 435px;
+  height: 272px;
+  width: 262px;
 }
 
 main .image-list .offers-card-image img {
   height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
 }
+
+main .image-list .offers-card-body a {
+  color: white;
+  text-transform: capitalize;
+  font-family: 'LeJeuneDeck-Regular-Web' Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: lighter;
+  text-decoration: underline;
+}
+

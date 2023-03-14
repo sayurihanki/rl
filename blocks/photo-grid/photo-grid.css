@@ -87,8 +87,8 @@ main .black-history-month .photo-grid > .cols > div.middle-col img {
 main .black-history-month .photo-grid h3 {
   font-family: "LeJeuneDeck-Regular-Web";
   font-weight: lighter;
-  font-size: 1.125em;
-  line-height: 1.556em;
+  font-size: 18px;
+  line-height: .956em;
   color: #000;
   text-transform: none;
 }
@@ -96,7 +96,7 @@ main .black-history-month .photo-grid h3 {
 main .black-history-month .photo-grid p {
   font-family: "Founders Grotesk Mono Regular";
   font-weight: lighter;
-  font-size: 16px;
+  font-size: 11px;
   line-height: 35.2px;
   color: #000;
   text-transform: none;
@@ -112,21 +112,39 @@ main .black-history-month .photo-grid p {
     margin: 0 210px ;
     font-family: 'Cormorant Garamond', serif;
     font-weight: light;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.333em;
   }
 
   main .black-history-month .photo-grid > .cols > div.left-col,
   main .black-history-month .photo-grid > .cols > div.right-col {
-    min-width: 264px;
+    min-width: 234px;
   }
 
   main .black-history-month .photo-grid > .cols > div.middle-col {
-    min-width: 490px;
+    min-width: 440px;
     padding: 0 20px;
   }
 
   main .black-history-month .photo-grid > .cols {
     width: 900px;
+  }
+
+  main .black-history-month .photo-grid h3 {
+    font-family: "LeJeuneDeck-Regular-Web";
+    font-weight: lighter;
+    font-size: 24px;
+    line-height: .956em;
+    color: #000;
+    text-transform: none;
+  }
+  
+  main .black-history-month .photo-grid p {
+    font-family: "Founders Grotesk Mono Regular";
+    font-weight: lighter;
+    font-size: 18px;
+    line-height: 35.2px;
+    color: #000;
+    text-transform: none;
   }
 }
