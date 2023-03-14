@@ -7,6 +7,7 @@ main .black-history-month {
   margin: 0;
   padding: 0;
   max-height: 78em;
+  margin-bottom: -10px;
 }
 
 main .black-history-month .bg-image,
@@ -21,28 +22,18 @@ main .black-history-month .overlay {
 
 main .black-history-month .overlay {
   position: absolute;
-  padding: 3.688em 0 0;
+  padding: 1.688em 0 0;
 }
 
 main .black-history-month .bg-image > picture > img {
   min-width: 100%;
 }
 
-
-
 main .black-history-month .overlay>.default-content-wrapper {
-
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; */
-  /* height: 24.875em; */
-  margin: 0 271px ;
-  /* margin: auto; */
+  margin: 0 70px ;
   font-family: 'Cormorant Garamond', serif;
   font-weight: light;
-  font-size: 1.4em;
+  font-size: 18px;
   line-height: 1.333em;
 }
 
@@ -51,32 +42,46 @@ main .black-history-month .photo-grid {
 }
 main .black-history-month .photo-grid>div {
   display: flex;
-  justify-content: space-between;
-  width: 51em;
+  justify-content: center;
+  width: 28em;
   margin: 0 auto;
 }
 
 main .black-history-month .photo-grid>div>div {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-main .black-history-month .photo-grid > .cols > div.left-col > div img,
-main .black-history-month .photo-grid > .cols > div.right-col > div img {
-  width: 264px;
+main .black-history-month .photo-grid > .cols > div > div > img,
+main .black-history-month .photo-grid > .cols > div > div > video {
+  border-radius: 15px;
+  object-fit: cover;
+  width: 100%;
 }
 
-main .black-history-month .photo-grid > .cols > div.left-col {
-  padding-right: 20px;
-}
+/* main .black-history-month .photo-grid > .cols > div.left-col > div img,
+main .black-history-month .photo-grid > .cols > div.right-col > div img,
+main .black-history-month .photo-grid > .cols > div.right-col > div video,
+main .black-history-month .photo-grid > .cols > div.right-col > div video {
+  
+} */
 
+main .black-history-month .photo-grid > .cols > div.left-col,
 main .black-history-month .photo-grid > .cols > div.right-col {
-  padding-left: 20px;
+  max-width: 184px;
+}
+
+main .black-history-month .photo-grid > .cols > div.middle-col {
+  min-width: 290px;
+  padding: 0 20px;
 }
 
 main .black-history-month .photo-grid > .cols > div.middle-col img {
-  height: 519px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  height: auto;
 }
 
 main .black-history-month .photo-grid h3 {
@@ -95,4 +100,33 @@ main .black-history-month .photo-grid p {
   line-height: 35.2px;
   color: #000;
   text-transform: none;
+}
+
+@media (min-width: 900px) {
+  main .black-history-month .overlay {
+    width: 16em;
+  }
+
+
+  main .black-history-month .overlay>.default-content-wrapper {
+    margin: 0 210px ;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: light;
+    font-size: 24px;
+    line-height: 1.333em;
+  }
+
+  main .black-history-month .photo-grid > .cols > div.left-col,
+  main .black-history-month .photo-grid > .cols > div.right-col {
+    min-width: 264px;
+  }
+
+  main .black-history-month .photo-grid > .cols > div.middle-col {
+    min-width: 490px;
+    padding: 0 20px;
+  }
+
+  main .black-history-month .photo-grid > .cols {
+    width: 900px;
+  }
 }

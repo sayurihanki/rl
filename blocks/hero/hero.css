@@ -16,6 +16,7 @@ main .hero {
     height: fit-content;
     z-index: -1;
     margin-top: var(--nav-offset);
+    margin-bottom:-10px;
 }
 
 main .hero h1 {

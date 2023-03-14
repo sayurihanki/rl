@@ -205,21 +205,26 @@ function reveals() {
       reveals[i].classList.remove("active");
     }
   }
-
+  const navWrapper = document.querySelector('.nav-wrapper');
   const greenbar = document.querySelector(".cards.stick"); 
-  if(greenbar.getBoundingClientRect().top < -74 && pos === 0) {
-    greenbar.style.position = 'fixed';
-    greenbar.style.top = '-80px';
+  const imgHeight = document.querySelector('.cards.stick img');
+  
+  const gbTop = greenbar.getBoundingClientRect().top;
+  if(gbTop < (imgHeight.offsetHeight - navWrapper.offsetHeight) && pos === 0) {
+    greenbar.style.position = 'fixed'; 
+    greenbar.style.top = `${(navWrapper.offsetHeight - imgHeight.offsetHeight)}px`;
+    console.log(greenbar.style.top);
+    console.log(greenbar.offsetHeight);
     greenbar.style['z-index'] = '1'; 
     pos = window.visualViewport.pageTop;
   } else if(pos > window.visualViewport.pageTop) {
     greenbar.style.position = 'relative';
     greenbar.style.top = 'unset';
-    greenbar.style['z-index'] = '1';
+    greenbar.style['z-index'] = 'unset';
     pos = 0;
   }
 
-  const navWrapper = document.querySelector('.nav-wrapper');
+  
   let bgColor = 'transparent';
   let fontColor = '#000';
   let className = '';
@@ -260,10 +265,22 @@ function reveals() {
   const isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
 
   const video = reveal.querySelector('video');
+  const videoH2 = reveal.querySelector('.overlay-h2');
   
   if(isVisible) {
-    vWidth += 100;
+    vWidth += 10;
+    video.style.left = '50%';
+    video.style.top = '50%';
+    video.style.transform = 'translate(-50%, -50%)';
     video.style.width = `${vWidth}px`;
+    video.style.maxHeight = '100%';
+
+    videoH2.style.left = '50%';
+    videoH2.style.top = '50%';
+    videoH2.style.transform = 'translate(-50%, -50%)';
+
+    videoH2.style.width = `${vWidth}px`;
+    videoH2.style.maxWidth = '80%';
   }
 }
 
