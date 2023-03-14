@@ -9,8 +9,8 @@ export default async function decorate(block) {
     if(videoSrc.href.includes(window.hlx.codeBasePath))
     {
       videoSrc.href = videoSrc.text;
-      console.log(videoSrc);
     }
+    
     makeVideo(block.querySelector('div:has(a)'), videoSrc.href);
     videoSrc.remove();
 

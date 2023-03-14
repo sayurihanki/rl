@@ -12,12 +12,12 @@
     width: 100%;
 }
 
-.columns > div > div:nth-child(2) {
+.columns > div > div:has(h2) {
     width: 26.438em;
     text-align: center;
 }
 
-.columns > div > div:nth-child(2) > h2::before {
+.columns > div > div > h2::before {
     content: '';
     display: block;
     height: 0.6em;
@@ -29,7 +29,7 @@
     text-align: center;
 }
 
-.columns > div > div:nth-child(2) > h2::after {
+.columns > div > div > h2::after {
     content: '';
     display: block;
     height: 0.6em;
@@ -45,37 +45,23 @@
 .columns > div > div > h2 {
     font-size: 2em;
     color: #D4C49C;
-    line-height: 0.500em;
-    width: 357px;
+    line-height: 0.900em;
+    width: 412px;
     font-family: 'Cormorant Garamond', serif;
     font-weight: 500;
     text-transform: uppercase;
     margin: auto;
 }
 
-.columns > div > div:nth-child(2) > p {
+.columns > div > div > p {
     font-size: .850em;
     line-height: 2.600em;
     font-family: "LeJeuneDeck-Regular-Web";
     color: white;
 }
 
-.columns > div > div > p.button-container > a::before {
-    /* content: "";
-    top: 50%;
-    -webkit-transform: translate(-50%,-50%) rotate(90deg);
-    transform: translate(-50%,-50%) rotate(90deg) scale(1.4);
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0.75em 1.313em 0.75em;
-    border-color: transparent transparent currentColor transparent;
-    content: '';
-    font-size: .35em;
-    position: absolute; */
-}
 
-.columns > div > div:nth-child(2) > p:nth-child(3) {
+.columns > div > div > p:nth-child(3) {
     font-family: "Founders Grotesk Text Regular";
     font-size: 16px ;
     letter-spacing: 0.014em;

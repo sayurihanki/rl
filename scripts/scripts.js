@@ -99,7 +99,7 @@ async function loadLazy(doc) {
   loadFooter(doc.querySelector('footer'));
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
-  addFavIcon(`${window.hlx.codeBasePath}/styles/favicon.svg`);
+  addFavIcon(`${window.hlx.codeBasePath}/icons/favicon.ico`);
   sampleRUM('lazy');
   sampleRUM.observe(main.querySelectorAll('div[data-block-name]'));
   sampleRUM.observe(main.querySelectorAll('picture > img'));
@@ -265,7 +265,7 @@ function reveals() {
   const isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
 
   const video = reveal.querySelector('video');
-  const videoH2 = reveal.querySelector('.overlay-h2');
+  const videoH2 = reveal.querySelector('.overlay > h2');
   
   if(isVisible) {
     vWidth += 10;

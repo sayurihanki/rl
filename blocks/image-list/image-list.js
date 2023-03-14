@@ -19,7 +19,6 @@ async function dataDrivenList(block) {
   const ul = createTag('ul');
   
   json.data.imageListByPath.item.imageListItems.forEach((row) => {
-    console.log(row);
     const li = createTag('li');
     const divImage = createTag('div', {class: 'offers-card-image'});
     divImage.innerHTML = `<img src='${row.asset._publishUrl}' />`;
@@ -28,7 +27,6 @@ async function dataDrivenList(block) {
     li.appendChild(divImage);
     li.appendChild(divDesc);
     ul.appendChild(li);
-    console.log(li);
   });
   [...block.children][0].replaceWith(ul);
 }
