@@ -271,6 +271,7 @@ function reveals() {
     video.style.transform = 'translate(-50%, -50%)';
     video.style.width = `${vWidth}px`;
     video.style.maxHeight = '100%';
+    video.style.maxWidth = '1920px';
   }
 }
 
