@@ -1,0 +1,151 @@
+.tabs .tabs-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  max-width: 100%;
+  overflow-x: auto;
+  border-bottom: 1px solid #e4f52c;
+}
+
+.tabs .tabs-list button {
+  flex: 0 0 max-content;
+  margin: 0;
+  border-radius: 0;
+  padding: 10px;
+  background-color: var(--color-white);
+  color: initial;
+  font-size: unset;
+  font-weight: bold;
+  line-height: unset;
+  text-align: initial;
+  text-overflow: unset;
+  overflow: unset;
+  white-space: unset;
+  transition: background-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: none;
+  border-right: none;
+}
+
+.tabs .tabs-list button p:first-of-type {
+  margin-bottom: 0.5rem;
+}
+
+.tabs .tabs-list button p:first-of-type span {
+  border-radius: 50%;
+  border: 3px solid #2c54f5;
+  width: 100px;
+  height: 100px;
+}
+
+.tabs .tabs-list button p:last-of-type {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  color: #2c54f5;
+}
+
+.tabs .tabs-list button[aria-selected="true"] {
+  border-bottom: 5px solid #2c54f5;
+  cursor: initial;
+}
+
+.tabs .tabs-list button[aria-selected="true"] p:first-of-type span {
+  background-color: #2c54f5;
+}
+
+.tabs .tabs-list button[aria-selected="true"] p:first-of-type span img {
+  filter: brightness(0) invert();
+}
+
+.tabs .tabs-list button[aria-selected="true"] p:last-of-type {
+  font-weight: 700;
+}
+
+.tabs .tabs-panel {
+  padding: 5rem 1rem 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
+}
+
+.tabs .tabs-panel[aria-hidden="true"] {
+  display: none;
+}
+
+.tabs .tabs-panel div:first-of-type p img {
+  max-width: unset;
+}
+
+.tabs .tabs-panel .info {
+  margin-right: 10%;
+}
+
+.tabs .tabs-panel .info h5 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.tabs .tabs-panel .info p:first-of-type {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.tabs .tabs-panel .info .button-container a {
+  font-size: 18px;
+  font-weight: 400;
+  min-width: 200px;
+  padding: 0.5rem;
+}
+
+.tabs .tabs-panel .info .button-container a:hover {
+  background-color: #fff;
+  color: #2c54f5;
+  outline: 1px solid #2c54f5;
+}
+
+@media (width <= 900px) {
+  .tabs .tabs-list {
+    gap: 2rem;
+  }
+
+  .tabs .tabs-list button span.icon {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .tabs .tabs-list button p:last-of-type {
+    font-size: 12px;
+  }
+
+  .tabs .tabs-panel {
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 1rem 0;
+    overflow: unset;
+  }
+
+  .tabs .tabs-list button p:first-of-type span {
+    border: 2px solid #f5762c;
+  }
+
+  .tabs .tabs-panel .info {
+    margin-right: 0;
+  }
+
+
+  .tabs .tabs-panel .info h5 {
+    font-size: 32px;
+  }
+
+  .tabs .tabs-panel .info p:first-of-type {
+    font-size: 18px;
+  }
+}
