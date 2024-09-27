@@ -5,6 +5,9 @@ Your project's description...
 - Preview: https://main--{repo}--{owner}.hlx.page/
 - Live: https://main--{repo}--{owner}.hlx.live/
 
+- https://main--rl--sayurihanki.hlx.page/
+- https://main--rl--sayurihanki.hlx.live/
+
 ## Installation
 
 ```sh
